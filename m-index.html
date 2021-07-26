@@ -13,6 +13,14 @@
         img{
             vertical-align: top;
         }
+        .clearfix::after{
+            display: block;
+            content:'';
+            clear:both;
+        }
+
+
+
         .wrap{
             width:360px;
             margin-left:auto;
@@ -23,25 +31,26 @@
         }
         .header-icons{
             border-bottom:1px solid #ffffff;
-            padding-top:19px;
-            padding-bottom:19px;
+            padding: 19px 12px;
         }
         .header-icons>.img-box{
-            display:inline-block;
-            width:30px;
-            margin-left:27px;
-            margin-right:27px;
+            float:left;
+            width: 30px;
+            margin-right:24px;
+            padding:0 18px;
+           
+        }
+        .header-icons>.box04{
+            margin-right:0
         }
         .header-bottom{
-            padding-top:28px;
-            padding-bottom:28px;
+            padding:28px 0;
+            text-align:center;
+            position:relative;
         }
         .ci{
             display:inline-block;
             width:156px;
-            margin-left:102px;
-            
-
         }
         h1{
             font-family:'Noto Sans KR';
@@ -52,26 +61,21 @@
             text-align:center;
         }
         .btn-nav{
-            display:inline-block;
-            width:66px;
-            margin-left:18px;
+          position:absolute;
+          top:28px;
+          right: 12px;
 
         }
         .line{
             width:22px;
             height:2px;
-            margin-left:44px;
             background-color: #ffffff;
-            border-radius:1px 1px 1px 1px;
+            border-radius:1px;
         }
         .line02{
             margin-top:7px;
             margin-bottom:7px;
         }
-        .line03{
-            margin-bottom: 23px;
-        }
-
         .slider{
             position:relative;
         }
@@ -141,11 +145,8 @@
             overflow:hidden;
             text-overflow:ellipsis;
         }
-        .best-key::after{
-            display:block;
-            content:"";
-            clear:both;
-        }
+        
+        
         .best-key>.first-ul{
             float:left;
 
@@ -214,7 +215,7 @@
 <body>
     <div class="wrap">
         <header class="header">
-            <div class="header-icons">
+            <div class="header-icons clearfix">
                 <div class="img-box box01">
                     <img src="./images/icon-home.svg" alt="홈으로 이동">
                 </div>
@@ -284,7 +285,7 @@
                     <h2>원색이 포인트 플랫</h2>
                 </div>
             </div>
-            <div class="best-key">
+            <div class="best-key clearfix">
                 <h2>인기검색어</h2>
                 <ul class="first-ul">
                     <li>쁘쁘걸</li>
